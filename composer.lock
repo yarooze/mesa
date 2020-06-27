@@ -1,0 +1,56 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "a6d1001c7c0af2819b79dd26c0503ea9",
+    "packages": [
+        {
+            "name": "yarooze/minime",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yarooze/minime.git",
+                "reference": "a2f3efe5784406368d6c81aaf2fa2f7416ce22e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yarooze/minime/zipball/a2f3efe5784406368d6c81aaf2fa2f7416ce22e7",
+                "reference": "a2f3efe5784406368d6c81aaf2fa2f7416ce22e7",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "app\\": "src/app"
+                }
+            },
+            "license": [
+                "Public Domain"
+            ],
+            "authors": [
+                {
+                    "name": "Yarooze"
+                }
+            ],
+            "support": {
+                "source": "https://github.com/yarooze/minime/tree/master",
+                "issues": "https://github.com/yarooze/minime/issues"
+            },
+            "time": "2020-02-15T17:33:05+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "yarooze/minime": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}

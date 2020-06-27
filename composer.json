@@ -1,0 +1,23 @@
+{
+    "name": "yarooze/mesa",
+    "license": "Public Domain",
+    "require": {        
+        "yarooze/minime": "dev-master"
+    },
+    "repositories": [
+      {
+        "type": "vcs",
+        "url": "https://github.com/yarooze/minime"
+      }
+    ],
+    "authors": [
+        {
+            "name": "Yarooze"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "app\\": "src/app"
+        }
+    }
+}
