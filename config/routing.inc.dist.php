@@ -19,40 +19,40 @@
  */
 define("PATH_TO_WEB_DIR", '');
 return array(
-  //
-      'getStuffById' =>
-      array('url'     => array('get','stuffbyid',array('name'=>'id','regexp'=>'\d+')),
+    //
+    'getStuffById' =>
+        array('url'     => array('get','stuffbyid',array('name'=>'id','regexp'=>'\d+')),
             'methods' => array('get'),
             'formats' => array(),
             'action'  => 'defaultAction',
             'credentials'     => array('AUTHENTICATED_FULLY'),
-      ),
-  //
-      'MyRegister' =>
-      array('url'        => array('register'),
-          'methods'    => array('get'),
-          'formats'    => array('html'),
-          'controller' => 'ExampleController',
-          'action'     => 'defaultAction',
-          'credentials'     => array('*'),
-      ),
-      'MyRegisterSubmit' =>
-      array('url'        => array('register','submit'),
-          'methods'    => array('post'),
-          'formats'    => array('html'),
-          'controller' => 'ExampleController',
-          'action'     => 'mySubmitAction',
-          'credentials'     => array('*'),
-      ),
-      'MyRegisterSuccess' =>
-      array('url'        => array('register','success'),
-          'methods'    => array('get'),
-          'formats'    => array('html'),
-          'controller' => 'ExampleController',
-          'action'     => 'myRegisterSuccessAction',
-          'credentials'     => array('*'),
-      ),
-  // CRUD
+        ),
+    //
+    'register' =>
+        array('url'        => array('register'),
+            'methods'    => array('get'),
+            'formats'    => array('html'),
+            'controller' => 'ExampleController',
+            'action'     => 'defaultAction',
+            'credentials'     => array('*'),
+        ),
+    'registerSubmit' =>
+        array('url'        => array('register','submit'),
+            'methods'    => array('post'),
+            'formats'    => array('html'),
+            'controller' => 'ExampleController',
+            'action'     => 'mySubmitAction',
+            'credentials'     => array('*'),
+        ),
+    'registerSuccess' =>
+        array('url'        => array('register','success'),
+            'methods'    => array('get'),
+            'formats'    => array('html'),
+            'controller' => 'ExampleController',
+            'action'     => 'registerSuccessAction',
+            'credentials'     => array('*'),
+        ),
+    // CRUD
 //    '{crud}List' =>
 //        array('url' => array('{crud}'),
 //            'methods' => array("get"),
@@ -85,14 +85,39 @@ return array(
 //            'action' => 'deleteAction',
 //            'credentials'     => array('AUTHENTICATED_FULLY'),
 //        ),
-  //
-      'default' =>
-      array('url'     => array(),
+    //
+    //
+    'loginSubmit' =>
+        array('url'        => array('login','submit'),
+            'methods'    => array('post'),
+            'formats'    => array('html'),
+            'controller' => 'SecurityController',
+            'action'     => 'loginSubmitAction',
+            'credentials'     => array('*'),
+        ),
+    'logout' =>
+        array('url'        => array('logout'),
+            'methods'    => array(),
+            'formats'    => array('html'),
+            'controller' => 'SecurityController',
+            'action'     => 'logoutAction',
+            'credentials'     => array('*'),
+        ),
+    'login' =>
+        array('url'     => array('login'),
+            'methods' => array(),
+            'formats' => array(),
+            'controller' => 'SecurityController',
+            'action'  => 'loginAction',
+            'credentials'     => array('*'),
+        ),
+    'default' =>
+        array('url'     => array(),
             'methods' => array(),
             'formats' => array(),
             'controller' => 'ExampleController',
             'action'  => 'defaultAction',
             'credentials'     => array('*'),
-      ),
-  //
+        ),
+    //
 );

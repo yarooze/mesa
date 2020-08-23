@@ -5,7 +5,7 @@ use app\core\I18n;
 use app\view\DefaultView as DefaultView,
     app\view\HtmlView as HtmlView,
     app\view\JsonView as JsonView,
-    app\form\MyRegisterForm as RegisterForm,
+    app\form\RegisterForm as RegisterForm,
     app\service\ApidocService;
 
 /**
@@ -15,35 +15,26 @@ use app\view\DefaultView as DefaultView,
 Class ApiController extends BaseController
 {
      /**
-     * @Api(name="api_doc", method="get", url="/api/getapidoc", action_url="api/getapidoc", _comment="This page")
+     * @Api(name="api_doc", method="get", action_url="api/getapidoc", _comment="This page")
      * @throws \ReflectionException
      */
     public function apidocAction() {
-        
-    //$view = new DefaultView($this->app);
-    $view = new JsonView($this->app);
+        $view = new JsonView($this->app);
+        $data = $this->app->request->getParameters();
 
-    $data = $this->app->request->getParameters();
+        /** @var I18n $i18n */
+        $i18n = $this->app->i18n;
+        $data['i18n'] = $i18n->trans('MSG');
 
-    //$form = new RegisterForm();
+        $host = $this->app->router->getHost();
+        $protocol = $this->app->router->getProtocol();
 
-    /** @var I18n $i18n */
-    $i18n = $this->app->i18n;    
-    $data['i18n'] = $i18n->trans('MSG');
-    
-    $host = $this->app->router->getHost();
-	 $protocol = $this->app->router->getProtocol();
-    
-    $content = ApidocService::generateApidocForClassFile(__CLASS__, $protocol . '://' . $host);
+        $content = ApidocService::generateApidocForClassFile(__CLASS__, $protocol . '://' . $host);
 
-    $params = array(
-        //'main_template_name' => 'Main',
-        //'template_name' => 'Body',
-        'data' => $content,
-      //  'form' => $form
-    );
-    
-    $view->render($params);        
-        
+        $params = array(
+            'data' => $content,
+        );
+
+        $view->render($params);
     }
 }

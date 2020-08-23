@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yarooze/minime.git",
-                "reference": "a2f3efe5784406368d6c81aaf2fa2f7416ce22e7"
+                "reference": "db108b9f6f43cffc6c02c7dc01bb6392266db55f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yarooze/minime/zipball/a2f3efe5784406368d6c81aaf2fa2f7416ce22e7",
-                "reference": "a2f3efe5784406368d6c81aaf2fa2f7416ce22e7",
+                "url": "https://api.github.com/repos/yarooze/minime/zipball/db108b9f6f43cffc6c02c7dc01bb6392266db55f",
+                "reference": "db108b9f6f43cffc6c02c7dc01bb6392266db55f",
                 "shasum": ""
             },
             "default-branch": true,
@@ -39,7 +39,7 @@
                 "source": "https://github.com/yarooze/minime/tree/master",
                 "issues": "https://github.com/yarooze/minime/issues"
             },
-            "time": "2020-02-15T17:33:05+00:00"
+            "time": "2020-06-27T14:32:04+00:00"
         }
     ],
     "packages-dev": [],
